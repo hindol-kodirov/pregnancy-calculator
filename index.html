@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pregnancy lalu-calc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/calc.js"></script>
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <section class="section-lalu-calc">
+        <div class="lalu-calc">
+          <div class="lalu-calc-header">
+            <div class="lalu-calc-text">
+              <h2 class="lalu-calc-title">
+                Homiladorlik kalendari — hisob kalkulyatori
+              </h2>
+              <p class="lalu-calc-subtitle">
+                Homiladorlikka oid kalendarni tuzib chiqish uchun uchta asosiy
+                ma’lumotga asoslanish mumkin, bu oxirgi hayz kelgan kun,
+                urug’lantirish sodir bo’lgan kun yoki taxmin qilinayotgan
+                tug’ruq kuni bo’lishi mumkin. Quyida o’zingizga ma’lum bo’lgan
+                ma’lumot turini tanlang va hisoblash tugmasini bosing.
+              </p>
+            </div>
+            <div class="lalu-calc-operations">
+              <div class="lalu-calc-operation-type">
+                <h3 class="lalu-calc-type-title">Ma'lumot turi</h3>
+                <select class="lalu-calc-type-select" id="lalu-calc-data-type">
+                  <option value="last-menstruation-day">
+                    So'nggi hayz kelgan kun
+                  </option>
+                  <option value="fertilization-day">
+                    Urug'lantirish sodir bo'lgan kun
+                  </option>
+                  <option value="guess-birth-day">
+                    Taxmin qilinayotgan tug'ruq kuni
+                  </option>
+                </select>
+              </div>
+              <div class="lalu-calc-date">
+                <div class="lalu-calc-date-calendar">
+                  <p class="lalu-calc-date-title">
+                    So'nggi hayz kelgan kunni belgilang
+                  </p>
+                  <input
+                    type="date"
+                    id="users-date"
+                    placeholder="Kunni belgilang"
+                  />
+                </div>
+
+                <div class="lalu-calc-date-button">
+                  <button class="" id="calculate-weeks">Hisoblash</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lalu-calc-body">
+            <div class="lalu-calc-result">
+              <div class="lalu-calc-result-main">
+                <h3 class="main-result"></h3>
+              </div>
+
+              <div class="lalu-calc-result-secondary">
+                <h3>Boshqa natijalar</h3>
+                <ul>
+                  <li>
+                    Homiladorlikning hozirgi muddati:
+                    <b><span class="pregnancy-duration"></span></b>
+                  </li>
+                  <li>
+                    Ayollar konsultatsiyasida ro’yxatdan o’tish vaqti:
+                    <b
+                      ><span class="weeks-to-consult"
+                        >2021-yil 21-noyabrdan boshlab uch hafta ichida</span
+                      ></b
+                    >
+                  </li>
+                  <li>
+                    Tug’ruqqacha qolgan kunlar:
+                    <b><span class="days-to-birth">166 kun</span></b>
+                  </li>
+                  <li>
+                    Homiladorlik testi natija ko’rsata boshlaydi:
+                    <b
+                      ><span class="pregnancy-test"
+                        >2021-yil 10-oktyabrdan boshlab</span
+                      ></b
+                    >
+                  </li>
+                  <li>
+                    Homilaning birinchi yurak urishi vaqti:
+                    <b
+                      ><span class="heartbeat-start"
+                        >2021-yil 24-oktyabrda</span
+                      ></b
+                    >
+                  </li>
+                  <li>
+                    Birinchi trimestr yakuni:
+                    <b
+                      ><span class="first-trimestr">2021-yil 19-dekabr</span></b
+                    >
+                  </li>
+                  <li>
+                    Homilaning birinchi qimirlashi vaqti:
+                    <b><span class="first-moves">2022-yil 16-yanvar</span></b>
+                  </li>
+                  <li>
+                    Homilaning yashovchanligi boshlanish vaqti:
+                    <b><span class="living-start">2022-yil 27-fevral</span></b>
+                  </li>
+                  <li>
+                    Ikkinchi trimestr yakuni:
+                    <b><span class="second-trimestr">2022-yil 27-mart</span></b>
+                  </li>
+                  <li>
+                    Taxminiy tug’ruq kuni:
+                    <b><span class="birth-date">2022-yil 19-iyunda</span></b>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside class="sidebar"></aside>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/uz_latn.js"></script>
+    <script src="/moment-with-locales.js"></script>
+  </body>
+</html>
